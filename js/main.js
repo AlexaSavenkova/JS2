@@ -14,7 +14,7 @@ const renderProduct = (title, price, img = placeholder) => {
                 </div>
                 <div class="product-info">
                     <h3>${title}</h3>
-                    <p>${price.toLocaleString('ru-RU')} руб.</p>
+                    <p>${price.toLocaleString('ru-RU')} RUB</p>
                     <button class="by-btn">Add to Cart</button>
                 </div>
               </div>`;
@@ -23,7 +23,6 @@ const renderProduct = (title, price, img = placeholder) => {
 const renderProducts = (list) => {
 
     const productListElement = document.querySelector('.products');
-    console.log(productListElement);
     list.forEach((product) => {
         productListElement.insertAdjacentHTML('beforeend', renderProduct(product.title, product.price))
     });
