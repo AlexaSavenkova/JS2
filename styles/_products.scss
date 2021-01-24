@@ -1,0 +1,31 @@
+
+.products {
+    margin-bottom: 30px;
+}
+.product-item {
+    //background: #f8f3f4;
+    background: rgba(242, 242, 242, 0.5);
+    color: #4d4d4d;
+
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+.product-img {
+    width: 120px;
+    height: 120px;
+
+    img {
+        object-fit: cover;
+    }
+}
+.product-info {
+    margin-left: 15px;
+}
+.by-btn {
+    color: #4d4d4d;
+}
+.by-btn:hover {
+    color: $majorColor;
+}
