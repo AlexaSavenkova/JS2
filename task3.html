@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+    <style>
+        input {
+            width: 200px;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+        .input-block {
+            display: flex;
+            align-items: center;
+        }
+        .error-block {
+            color: red;
+            margin-left: 20px;
+        }
+        button{
+            border: none;
+            background: rebeccapurple;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        button:disabled {
+            background: #dbcccc;
+        }
+        .invalid{
+            border: 2px solid red;
+        }
+        .valid{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" id="myform">
+    <div>
+        <label>
+            Your name <br>
+            <div class="input-block">
+                <input type="text" name="name" id="name">
+                <div class="error-block" id="nameErr"></div>
+            </div>
+        </label>
+    </div>
+    <div>
+        <label>
+            Your phone <br>
+            <div class="input-block">
+                <input type="tel" name="phone" id="phone">
+                <div class="error-block" id="phoneErr"></div>
+            </div>
+        </label>
+    </div>
+    <div>
+        <label>
+            Your email <br>
+            <div class="input-block">
+                <input type="email" name="email" id="email">
+                <div class="error-block" id="emailErr"></div>
+            </div>
+        </label>
+    </div>
+    <button id="val-btn">Submit</button>
+</form>
+<script src="task3.js"></script>
+<script>
+    window.onload = () => {
+        const btn = document.getElementById('val-btn');
+        document.getElementById('myform').addEventListener('submit', e => {
+            const valid = new Validator('myform');
+            if(!valid.valid){
+                e.preventDefault();
+            }
+        })
+    }
+</script>
+</body>
+</html>

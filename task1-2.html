@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1-2</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        div {
+            margin-left: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h3>Task 1</h3>
+    <p id="task1">
+        One: 'Hi Mary.'<br>
+        Two: 'Oh, hi.'<br>
+        One: 'How are you doing?'<br>
+        Two: 'I'm doing alright. How about you?'<br>
+        One: 'Not too bad. The weather is great isn't it?'<br>
+        Two: 'Yes. It's absolutely beautiful today.'<br>
+        One: 'I wish it was like this more frequently.'<br>
+        Two: 'Me too.'<br>
+        One: 'So where are you going now?'<br>
+        Two: 'I'm going to meet a friend of mine at the department store'<br>
+        One: 'Going to do a little shopping?'<br>
+        Two: 'Yeah, I have to buy some presents for my parents.'<br>
+        One: 'What's the occasion?'<br>
+        Two: 'It's their anniversary.'<br>
+        One: 'That's great. Well, you better get going. You don't want to be late.'<br>
+        Two: 'I'll see you next time.'<br>
+        One: 'Sure.' Bye.'
+    </p>
+    <button id="btn1">Replace</button>
+</div>
+<div >
+    <h3>Task 2</h3>
+    <p id="task2">
+        One: 'Hi Mary.'<br>
+        Two: 'Oh, hi.'<br>
+        One: 'How are you doing?'<br>
+        Two: 'I'm doing alright. How about you?'<br>
+        One: 'Not too bad. The weather is great isn't it?'<br>
+        Two: 'Yes. It's absolutely beautiful today.'<br>
+        One: 'I wish it was like this more frequently.'<br>
+        Two: 'Me too.'<br>
+        One: 'So where are you going now?'<br>
+        Two: 'I'm going to meet a friend of mine at the department store'<br>
+        One: 'Going to do a little shopping?'<br>
+        Two: 'Yeah, I have to buy some presents for my parents.'<br>
+        One: 'What's the occasion?'<br>
+        Two: 'It's their anniversary.'<br>
+        One: 'That's great. Well, you better get going. You don't want to be late.'<br>
+        Two: 'I'll see you next time.'<br>
+        One: 'Sure.' Bye.'
+    </p>
+    <button id="btn2">Replace</button>
+</div>
+<script>
+    const text1 = document.getElementById('task1');
+    const btn1 = document.getElementById('btn1');
+    btn1.addEventListener('click', ()=> {
+        text1.innerHTML = text1.innerHTML.replace(/'/g, '"');
+        btn1.remove();
+    });
+    const text2 = document.getElementById('task2');
+    const btn2 = document.getElementById('btn2');
+    btn2.addEventListener('click', ()=> {
+        text2.innerHTML = text2.innerHTML.replace(/\B'|'\B/g, '"');
+        btn2.remove();
+    });
+
+</script>
+</body>
+</html>
