@@ -39,7 +39,8 @@ let getRequest = (url) => {
 // ------------------------------------------------
 
 class ProductList {
-    constructor(container = '.products') {
+    constructor(cart, container = '.products') {
+        this.cart = cart;
         this.container = container;
         this._goods = [];
         this._allProducts = [];
@@ -55,13 +56,6 @@ class ProductList {
             })
             .catch((error) => console.log(error));
     }
-
-    // _fetchGoods() {
-    //     getRequest(`${API}catalogData.json`, (data) => {
-    //         this._goods = JSON.parse(data);
-    //         this._render();
-    //     })
-    // }
 
     _render() {
         const block = document.querySelector(this.container);
@@ -146,7 +140,14 @@ class Cart {
         for (let product of this.cartProducts) {
             block.insertAdjacentHTML('beforeend', product._renderCartItem());
         }
-        block.insertAdjacentHTML('beforeend', this.calculateTotalPrice());
+
+        const totalPrice = this.calculateTotalPrice();
+        const totalPriceHTML = totalPrice ?
+            `<h3 class="product-info"> Total price is ${totalPrice.toLocaleString('ru-RU')} \u20bd</h3>` :
+            '<h3 class="product-info">Cart is empty</h3>';
+
+        block.insertAdjacentHTML('beforeend', totalPriceHTML);
+
         this._addEventHandlers();
     }
 
@@ -182,7 +183,6 @@ class Cart {
     }
 
     deleteItem(index){
-        // const index = this.getProductIndexById(product.id_product);
         if ( index !== -1) {
             this.cartProducts.splice(index, 1);
             this._render();
@@ -195,15 +195,11 @@ class Cart {
 
 
     calculateTotalPrice () {
-        const totalPrice = this.cartProducts.reduce((sum, {price ,quantity}) => sum+= price * quantity, 0);
-            if (totalPrice)
-                return ` <h3 class="product-info"> Total price is ${totalPrice.toLocaleString('ru-RU')} \u20bd</h3>`;
-            else
-                return '<h3 class="product-info">Cart is empty</h3>';
+        return this.cartProducts.reduce((sum, {price ,quantity}) => sum+= price * quantity, 0);
     }
 }
-
-const productList = new ProductList();
 const cart = new Cart();
+const productList = new ProductList(cart);
+
 
 
