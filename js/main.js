@@ -45,6 +45,7 @@ class ProductList {
         this._goods = [];
         this._allProducts = [];
         this._fetchGoods();
+        this.cart._init();
     }
 
     _fetchGoods() {
@@ -128,8 +129,10 @@ class Cart {
     constructor(container = '.cartBlock') {
         this.container = container;
         this.cartProducts = []; // иассив экземрляров класса CartItem
-        this._render();
+    }
+    _init() {
         this._toggleCart();
+        this._render();
     }
     _render() {
         const block = document.querySelector(this.container);
