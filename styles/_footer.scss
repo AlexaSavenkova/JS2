@@ -1,0 +1,147 @@
+footer {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
+    gap: 50px;
+
+    @media (max-width: 991px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    @media (max-width: 450px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+.footerDescription {
+    @media (max-width: 991px) {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+}
+
+.footerDescriptionText {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #898989;
+
+    p {
+        margin-top: 26px;
+    }
+}
+
+.footerSection {
+    text-align: left;
+
+    h2 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: $majorColor;
+        margin-bottom: 33px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #898989;
+        margin-bottom: 23px;
+
+        &:hover {
+            color: $majorColor;
+        }
+    }
+}
+
+.footerSection:last-child a {
+    @media (max-width: 450px) {
+        display: inline;
+        margin-right: 20px;
+    }
+}
+
+.footerSection:last-child {
+    @media (max-width: 450px) {
+        grid-column: 1 / -1;
+    }
+}
+
+.copyrightsAndSocialMedia {
+    background: #e6e6e6;
+    margin-top: 70px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 80px;
+        align-items: center;
+
+        @media (max-width: 1170px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 550px) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+}
+
+.copyrights {
+    font-size: 16px;
+    line-height: 42px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #7a7a7a;
+
+    @media (max-width: 550px) {
+        justify-self: center;
+    }
+
+}
+
+.socialMedia {
+    display: flex;
+    justify-self: right;
+
+    @media (max-width: 550px) {
+        justify-self: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    i {
+        font-size: 16px;
+        line-height: 42px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #b2b2b2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        background-color: #ffffff;
+        margin-left: 8px;
+
+        &:hover {
+            color: #f7f7f8;
+            background-color: $majorColor;
+        }
+    }
+
+
+}
