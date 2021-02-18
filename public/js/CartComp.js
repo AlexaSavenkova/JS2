@@ -24,7 +24,6 @@ Vue.component('cart', {
         },
 
         addToCart(product) {
-            // пока без обращения к серверу
             const item = this.cartItems.find(elem => elem.id_product === product.id_product);
             if (item){
                 // изменям количество
