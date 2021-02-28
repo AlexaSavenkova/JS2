@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
+
+$majorColor: #de8590;
+$imagesPath: "../images";
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+
+    @media (min-width: 1140px) {
+        width: 1140px;
+    }
+}
+
+@import "error";
+@import "logo";
+@import "header";
+@import "topNav";
+@import "newArrivals";
+@import "cart";
+@import "products";
+@import "reviewsAndSubscribe";
+@import "footer";
