@@ -1,0 +1,50 @@
+[
+  {
+    "id_product": 1,
+    "product_name": "T-shirt",
+    "price": 52,
+    "img": "1.jpg"
+  },
+  {
+    "id_product": 2,
+    "product_name": "Blouse",
+    "price": 60,
+    "img": "2.jpg"
+  },
+  {
+    "id_product": 3,
+    "product_name": "Coat",
+    "price": 100,
+    "img": "3.jpg"
+  },
+  {
+    "id_product": 4,
+    "product_name": "Top",
+    "price": 70,
+    "img": "4.jpg"
+  },
+  {
+    "id_product": 5,
+    "product_name": "Dress",
+    "price": 110,
+    "img": "5.jpg"
+  },
+  {
+    "id_product": 6,
+    "product_name": "Jacket",
+    "price": 75,
+    "img": "6.jpg"
+  },
+  {
+    "id_product": 7,
+    "product_name": "Trousers",
+    "price": 55,
+    "img": "7.jpg"
+  },
+  {
+    "id_product": 8,
+    "product_name": "Pullover",
+    "price": 50,
+    "img": "8.jpg"
+  }
+]

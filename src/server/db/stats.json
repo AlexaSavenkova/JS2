@@ -1,0 +1,27 @@
+[
+    {
+        "time": "February 28th 2021, 3:11:10 pm",
+        "prod_name": "Blouse",
+        "action": "add"
+    },
+    {
+        "time": "March 1st 2021, 7:20:48 pm",
+        "prod_name": "Top",
+        "action": "remove"
+    },
+    {
+        "time": "March 1st 2021, 7:21:01 pm",
+        "prod_name": "T-shirt",
+        "action": "change"
+    },
+    {
+        "time": "March 1st 2021, 7:21:01 pm",
+        "prod_name": "Blouse",
+        "action": "change"
+    },
+    {
+        "time": "March 2nd 2021, 4:27:53 pm",
+        "prod_name": "Jacket",
+        "action": "add"
+    }
+]

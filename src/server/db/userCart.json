@@ -1,0 +1,27 @@
+{
+    "amount": 299,
+    "countGoods": 3,
+    "contents": [
+        {
+            "quantity": 2,
+            "id_product": 1,
+            "product_name": "T-shirt",
+            "price": 52,
+            "img": "1.jpg"
+        },
+        {
+            "quantity": 2,
+            "id_product": 2,
+            "product_name": "Blouse",
+            "price": 60,
+            "img": "2.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 6,
+            "product_name": "Jacket",
+            "price": 75,
+            "img": "6.jpg"
+        }
+    ]
+}
