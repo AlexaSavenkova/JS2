@@ -1,0 +1,122 @@
+.featured {
+    margin-top: 91px;
+    text-align: center;
+}
+
+.featuredHeaderTop {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #222222
+}
+
+.featuredHeaderBottom {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #9f9f9f;
+    margin-bottom: 50px;
+}
+
+.featuredBrowseAllBtn {
+    width: 212px;
+    height: 48px;
+    background-color: #f16d7f;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    margin-top: 54px;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: grid;
+    row-gap: 35px;
+    grid-template-columns: repeat(auto-fit, 263px);
+    justify-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+
+    @media (max-width: 808px) {
+        justify-content: space-around;
+    }
+
+
+    .featuredItem {
+
+        .featuredHover {
+            position: absolute;
+            width: 263px;
+            height: 281px;
+            background-color: rgba(58, 56, 56, 0.83);
+            display: none;
+
+            button {
+                width: 123px;
+                height: 39px;
+                border: 1px solid #ffffff;
+                font-size: 13px;
+                font-weight: 400;
+                color: #ffffff;
+                background-color: transparent;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .featuredPicture {
+            width: 263px;
+            height: 281px;
+            object-fit: contain;
+            background-color: #efefef;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .featuredInfo {
+            height: 83px;
+            background-color: #ffffff;
+            text-transform: uppercase;
+            text-align: left;
+            padding-left: 11px;
+            padding-right: 11px;
+            padding-top: 18px;
+            box-sizing: border-box;
+
+            .featuredItemName {
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: 400;
+                color: #222222;
+            }
+
+            .featuredItemPrice {
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 700;
+                color: #f16d7f;
+                margin-top: 13px;
+            }
+        }
+
+        &:hover .featuredHover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover .featuredInfo {
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.15);
+        }
+
+    }
+
+}
