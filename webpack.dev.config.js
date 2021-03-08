@@ -33,6 +33,20 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
+                test: /\.scss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            // Prefer `dart-sass`
+                            implementation: require('sass'),
+                        },
+                    },
+                ],
+            },
+            {
                 test: /\.(png|jpg|svg|gif)$/,
                 use: [
                     {
